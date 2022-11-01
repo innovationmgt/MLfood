@@ -160,36 +160,4 @@ with st.form(key="image_metadata_submit_form", clear_on_submit=True):
             st.session_state["upload_key"] = str(uuid.uuid4())
 
 
-st.write("## FAQ")
-with st.expander("What happens to my image?"):
-    st.write(
-        """
-    When you click "upload image", your image gets stored on Nutrify servers\
-         (a big hard drive on Google Cloud).\n
-    Here's a pretty picture which describes it in more detail:
-    """
-    )
-    st.image("./images/image-uploading-workflow-with-background.png")
-    st.write(
-        "Later on, images in the database will be used to train a computer \
-            vision model to power Nutrify."
-    )
-with st.expander("Why do you need images of food?"):
-    st.write(
-        """
-    Machine learning models learn by looking at many different examples \
-        of things.\n
-    Food included.\n
-    Eventually, Nutrify wants to be an app you can use to *take a photo of \
-        food and learn about it*.\n
-    To do so, we'll need many different examples of foods to build a \
-        computer vision
-    model capable of identifying almost anything you can eat.\n
-    And the more images of food you upload, the better the models will get.
-    """
-    )
-
-st.markdown(
-    "View the source code for this page on \
-        [GitHub](https://github.com/mrdbourke/nutrify)."
 )
